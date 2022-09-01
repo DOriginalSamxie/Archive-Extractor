@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar {
+  background: #000;
+  padding: 1rem 2rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#navbarSupportedContent > ul > li:nth-child(n) > a {
+  color: #fff;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+}
+#navbarSupportedContent > ul > li:nth-child(n) > a:hover {
+  color: rgb(214, 214, 30);
+}
+@media (min-width: 50em) {
+  body > header > nav > div > button.btn {
+    display: none;
+    background: #000;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    color: #fff;
+  }
+}
+
+#navbarSupportedContent > button {
+  background: #000;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.hero {
+  margin-top: 10%;
+}
+.hero p {
+  margin-inline: auto;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+}
+.hero .card {
+  margin-inline: auto;
+  padding-top: 1rem;
+  width: 80vw;
+  height: 60vh;
+}
+
+body > main > div > div > div > div > button {
+  padding: 0.5rem 1.2rem;
+}
+
+#open-file-button > div.row-1 {
+  font-size: 18px;
+}
+#open-file-button > div.row-2 {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 1px;
+}
+
+#open_remote > div.or_methods.cloudOpeners {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+#open_remote > div.or_url_enter_form {
+  padding-bottom: 1rem;
+}
+
+/* #navbarSupportedContent > ul > li:nth-child(n) > a > i {
+  font-size: 1rem;
+  font-weight: 100;
+  font-weight: ;
+} */
