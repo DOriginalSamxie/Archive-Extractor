@@ -84,6 +84,12 @@ body > main > div > div > div > div > button {
   padding-bottom: 1rem;
 }
 
+@media (max-width: 25em) {
+  #navbarSupportedContent > button {
+    display: none;
+  }
+}
+
 /* #navbarSupportedContent > ul > li:nth-child(n) > a > i {
   font-size: 1rem;
   font-weight: 100;
