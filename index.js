@@ -26,6 +26,9 @@ $('#file').on('change', function (evt) {
       .then(
         function (zip) {
           var dateAfter = new Date()
+          // hide the current div....
+          //show the result UI div here.....$("result").show(200);
+          //
           $title.append(
             $('<span>', {
               class: 'small',
