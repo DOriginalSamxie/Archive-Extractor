@@ -176,6 +176,29 @@
                   style="visibility: hidden; width: 1px; height: 1px"
                 />
               </button>  -->
+              <div class="hero" id="result">
+                <div class="container-fluid">
+                  <h2>Archive Extractor</h2>
+                  <div class="card">
+                    <h3 style="font-weight: 800">
+                      Archive Successfully Extracted
+                    </h3>
+                    <p>Click on a file to download it</p>
+                    <button class="result">save all as a zip</button>
+                    <div>
+                      <div id="result_block" class="hidden">
+                        <h3>Content :</h3>
+                        <div id="result"></div>
+                      </div>
+                      <button>
+                        <a style="text-decoration: none" href="./index.html"
+                          >Extract another archive</a
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <button
                 class="btn btn-lg btn-primary fileinput-button"
                 id="open_file_button"
