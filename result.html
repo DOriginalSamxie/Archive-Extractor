@@ -154,97 +154,31 @@
       <div class="hero">
         <div class="container-fluid">
           <h2>Archive Extractor</h2>
-          <p>
-            Archive extractor is a small and easy online tool tool that can
-            extract over 70 types of compressed<br />files,such as
-            7z,zipx,rar,exe,dmg and many more
-          </p>
-
           <div class="card">
-            <div class="card-body">
-              <!-- <button
-                class="btn btn-primary fileinput-button"
-                id="open-file-button"
-              >
-                <div class="input-group" >
-                  <div class="row-1">Choose file</div>
-                  <div class="row-2">from your computer</div>
-                </div>
-                <input
-                  type="file"
-                  multiple="multiple"
-                  style="visibility: hidden; width: 1px; height: 1px"
-                />
-              </button>  -->
-              <button
-                class="btn btn-lg btn-primary fileinput-button"
-                id="open_file_button"
-                onclick="javascript: document.getElementById('file').click()"
-              >
-                <div class="row_1">Choose file</div>
-                <div class="row_2">from your computer</div>
-                <input
-                  type="file"
-                  multiple="multiple"
-                  style="
-                    visibility: hidden;
-                    position: absolute;
-                    width: 1px;
-                    height: 1px;
-                  "
-                  id="file"
-                />
-              </button>
-
-              <div id="open_remote" class="openRemoteState_initial">
-                <div class="or_methods cloudOpeners">
-                  <a
-                    href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-                    class="gdrive google"
-                    ><i class="fa-brands fa-google-drive"></i>Google Drive</a
-                  >
-                  <a href="#" class="dropbox"
-                    ><i class="fa-brands fa-dropbox"></i>Dropbox</a
-                  >
-                  <a href="#" class="url"
-                    ><i class="fa-solid fa-link"></i>URL</a
-                  >
-                </div>
-                <div class="or_url_enter_form">
-                  <button class="btn btn-success open">Open</button>
-                  <button class="btn btn-default cancel">Cancel</button>
-                </div>
-                <div class="drop_here_txt">or drag and drop file here...</div>
+            <h3 style="font-weight: 800">Archive Successfully Extracted</h3>
+            <p>Click on a file to download it</p>
+            <button class="result">save all as a zip</button>
+            <div>
+              <div id="result_block" class="hidden">
+                <h3>Content :</h3>
+                <div id="result"></div>
               </div>
-
-              <!-- <a href="#" class="card-link"
-                ><i class="fa-brands fa-google-drive"></i>From Google Drive</a
-              >
-              <a href="#" class="card-link"
-                ><i class="fa-brands fa-dropbox"></i>Dropbox</a
-              >
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-link"></i>URL</a
-              > -->
+              <button>
+                <a style="text-decoration: none" href="./index.html"
+                  >Extract another archive</a
+                >
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <h3>Choose the local(s) zip file(s)</h3>
-    <p class="note">
-      Note : your browser will process the zip file, don't choose a file too big
-      !
-    </p>
-    <input type="file" id="file" name="file" multiple /><br />
 
-    <div id="result_block" class="hidden">
-      <h3>Content :</h3>
-      <div id="result"></div>
-    </div>
     <footer>
       <!-- place footer here -->
     </footer>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"
       integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg=="

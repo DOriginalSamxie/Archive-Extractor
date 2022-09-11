@@ -22,6 +22,22 @@
 #navbarSupportedContent > ul > li:nth-child(n) > a:hover {
   color: rgb(214, 214, 30);
 }
+.hero .result {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #0346ff;
+  border-color: #0041f5;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.2rem;
+}
 @media (min-width: 50em) {
   body > header > nav > div > button.btn {
     display: none;
