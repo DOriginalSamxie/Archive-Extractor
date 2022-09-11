@@ -166,7 +166,7 @@
                 class="btn btn-primary fileinput-button"
                 id="open-file-button"
               >
-                <div class="input-group">
+                <div class="input-group" >
                   <div class="row-1">Choose file</div>
                   <div class="row-2">from your computer</div>
                 </div>
@@ -175,7 +175,7 @@
                   multiple="multiple"
                   style="visibility: hidden; width: 1px; height: 1px"
                 />
-              </button> -->
+              </button>  -->
               <button
                 class="btn btn-lg btn-primary fileinput-button"
                 id="open_file_button"
@@ -183,6 +183,7 @@
                 <div class="row_1">Choose file</div>
                 <div class="row_2">from your computer</div>
                 <input
+                  id="input-file"
                   type="file"
                   multiple="multiple"
                   style="
@@ -195,7 +196,9 @@
               </button>
               <div id="open_remote" class="openRemoteState_initial">
                 <div class="or_methods cloudOpeners">
-                  <a href="#" class="gdrive google"
+                  <a
+                    href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    class="gdrive google"
                     ><i class="fa-brands fa-google-drive"></i>Google Drive</a
                   >
                   <a href="#" class="dropbox"
@@ -229,7 +232,7 @@
     <footer>
       <!-- place footer here -->
     </footer>
-
+    <script src="./unarchiver.min.js"></script>
     <script
       src="https://kit.fontawesome.com/aae46fd4cd.js"
       crossorigin="anonymous"
