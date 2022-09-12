@@ -21,8 +21,11 @@ $('#file').on('change', function (evt) {
       .then(
         function (zip) {
           var dateAfter = new Date()
+
           $('#archive').hide()
           $('#result').show()
+          $('#result1').show()
+
           //show the result UI div here.....$("result").show(200);
           //
           $title.append(

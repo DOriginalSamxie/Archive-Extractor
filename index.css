@@ -48,8 +48,9 @@
     color: #fff;
   }
 }
-#result {
+#result1 {
   display: none;
+  height: 90vh;
 }
 
 #navbarSupportedContent > button {
@@ -107,6 +108,9 @@ body > main > div > div > div > div > button {
 @media (max-width: 25em) {
   #navbarSupportedContent > button {
     display: none;
+  }
+  #result1 {
+    height: 80vh;
   }
 }
 
