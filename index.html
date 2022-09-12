@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/index.css" />
+    <script src="./jquery/jquery.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -248,78 +249,7 @@
         </div>
       </div>
     </main>
-    <h3>Choose the local(s) zip file(s)</h3>
-    <p class="note">
-      Note : your browser will process the zip file, don't choose a file too big
-      !
-    </p>
-    <input type="file" id="file" name="file" multiple /><br />
 
-    <div id="result_block" class="hidden">
-      <h3>Content :</h3>
-      <div id="result"></div>
-    </div>
-    <script>
-      'use strict'
-
-      var $result = $('#result')
-      $('#file').on('change', function (evt) {
-        // remove content
-        $result.html('')
-        // be sure to show the results
-        $('#result_block').removeClass('hidden').addClass('show')
-
-        // Closure to capture the file information.
-        function handleFile(f) {
-          var $title = $('<h4>', {
-            text: f.name,
-          })
-          var $fileContent = $('<ul>')
-          $result.append($title)
-          $result.append($fileContent)
-
-          var dateBefore = new Date()
-          JSZip.loadAsync(f) // 1) read the Blob
-            .then(
-              function (zip) {
-                var dateAfter = new Date()
-                $('#archive').hide()
-                $('#result').show(2000)
-                //show the result UI div here.....$("result").show(200);
-                //
-                $title.append(
-                  $('<span>', {
-                    class: 'small',
-                    text: ' (loaded in ' + (dateAfter - dateBefore) + 'ms)',
-                  })
-                )
-
-                zip.forEach(function (relativePath, zipEntry) {
-                  // 2) print entries
-                  $fileContent.append(
-                    $('<li>', {
-                      text: zipEntry.name,
-                    })
-                  )
-                })
-              },
-              function (e) {
-                $result.append(
-                  $('<div>', {
-                    class: 'alert alert-danger',
-                    text: 'Error reading ' + f.name + ': ' + e.message,
-                  })
-                )
-              }
-            )
-        }
-
-        var files = evt.target.files
-        for (var i = 0; i < files.length; i++) {
-          handleFile(files[i])
-        }
-      })
-    </script>
     <footer>
       <!-- place footer here -->
     </footer>
@@ -330,6 +260,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="index.js" type="text/javascript"></script>
 
     <script
       src="https://kit.fontawesome.com/aae46fd4cd.js"
