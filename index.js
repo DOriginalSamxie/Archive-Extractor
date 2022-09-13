@@ -54,6 +54,11 @@ $('#file').on('change', function (evt) {
               })
             )
           })
+          $('#jstree').jstree()
+          // 7 bind to events triggered on the tree
+          $('#jstree').on('changed.jstree', function (e, data) {
+            console.log(data.selected)
+          })
         },
         function (e) {
           $result.append(
@@ -70,11 +75,6 @@ $('#file').on('change', function (evt) {
   for (var i = 0; i < files.length; i++) {
     handleFile(files[i])
   }
-  $('#jstree').jstree()
-  // 7 bind to events triggered on the tree
-  $('#jstree').on('changed.jstree', function (e, data) {
-    console.log(data.selected)
-  })
 })
 function func1() {
   $('#archive').show()
