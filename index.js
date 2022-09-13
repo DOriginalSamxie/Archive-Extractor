@@ -70,6 +70,11 @@ $('#file').on('change', function (evt) {
   for (var i = 0; i < files.length; i++) {
     handleFile(files[i])
   }
+  $('#jstree').jstree()
+  // 7 bind to events triggered on the tree
+  $('#jstree').on('changed.jstree', function (e, data) {
+    console.log(data.selected)
+  })
 })
 function func1() {
   $('#archive').show()
@@ -77,11 +82,7 @@ function func1() {
   $('#result1').hide()
 }
 // 6 create an instance when the DOM is ready
-$('#jstree').jstree()
-// 7 bind to events triggered on the tree
-$('#jstree').on('changed.jstree', function (e, data) {
-  console.log(data.selected)
-})
+
 // $(function () {
 //   // 6 create an instance when the DOM is ready
 //   $('#jstree').jstree()
