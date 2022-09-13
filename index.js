@@ -60,7 +60,11 @@ $('#file').on('change', function (evt) {
     handleFile(files[i])
   }
 })
-
+function func1() {
+  $('#archive').show()
+  $('#result').show()
+  $('#result1').hide()
+}
 $(function () {
   // 6 create an instance when the DOM is ready
   $('#jstree').jstree()
