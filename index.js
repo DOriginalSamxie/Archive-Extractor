@@ -15,6 +15,15 @@ $('#file').on('change', function (evt) {
     var $fileContent = $('<ul>')
     $result.append($title)
     $result.append($fileContent)
+    $(function () {
+      // 6 create an instance when the DOM is ready
+      $('#jstree').jstree()
+      // 7 bind to events triggered on the tree
+      $('#jstree').on('changed.jstree', function (e, data) {
+        console.log(data.selected)
+      })
+      // 8 interact with the tree - either way is OK
+    })
 
     var dateBefore = new Date()
     JSZip.loadAsync(f) // 1) read the Blob
