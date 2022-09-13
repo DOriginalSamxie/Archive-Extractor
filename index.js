@@ -12,9 +12,11 @@ $('#file').on('change', function (evt) {
     var $title = $('<h4>', {
       text: f.name,
     })
+    var $jsDiv = $('<div id="jstree">')
     var $fileContent = $('<ul>')
     $result.append($title)
-    $result.append($fileContent)
+    $result.append($jsDiv)
+    $jsDiv.append($fileContent)
     $(function () {
       // 6 create an instance when the DOM is ready
       $('#jstree').jstree()
