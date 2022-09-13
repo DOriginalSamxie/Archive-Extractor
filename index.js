@@ -15,8 +15,8 @@ $('#file').on('change', function (evt) {
     var $jsDiv = $('<div id="jstree">')
     var $fileContent = $('<ul>')
     $result.append($title)
-    $jsDiv.append($fileContent)
     $result.append($jsDiv)
+    $jsDiv.append($fileContent)
     // $(function () {
     //   // 6 create an instance when the DOM is ready
     //   $('#jstree').jstree()
@@ -76,6 +76,12 @@ function func1() {
   $('#result').show()
   $('#result1').hide()
 }
+// 6 create an instance when the DOM is ready
+$('#jstree').jstree()
+// 7 bind to events triggered on the tree
+$('#jstree').on('changed.jstree', function (e, data) {
+  console.log(data.selected)
+})
 // $(function () {
 //   // 6 create an instance when the DOM is ready
 //   $('#jstree').jstree()
